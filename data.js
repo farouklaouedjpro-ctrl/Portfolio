@@ -4,37 +4,38 @@
 window.PORTFOLIO_DATA = {
   basics: {
     name: "Farouk LAOUEDJ",
-    kicker: "Alternant Management et Conseil en systèmes d'informations",
-    role: "Chef de projet",
+    kicker: "Chef de projet IT, Intelligence Artificielle et Système d'information",
+    role: "Chef de projet IT & Data",
     lead:
-      "Expert en devenir des SI, je bâtis des solutions numériques où l'IA et l'automatisation rencontrent la stratégie métier. J’aime transformer des problématiques complexes en processus simples, agiles et maîtrisés.",
+      "Expert en devenir des SI, je bâtis des solutions numériques où l'IA et l'automatisation rencontrent la stratégie métier. J'aime gérer des projets IT complexes, analyser des données et développer des modèles d'intelligence artificielle pour transformer vos processus.",
     location: "Île-de-France, FR",
-    specialty: "SI, IA & Automatisation des Processus",
+    specialty: "Chef de projet IT, AI, Data et Système d'information",
     availability: "Ouvert aux opportunités",
-    oneLiner: "Objectif: Transformer vos processus métiers grâce à l’IA et l'automatisation pour délivrer une valeur mesurable.",
+    oneLiner: "Chef de projet IT dédié à l'Intelligence Artificielle, l'Analyse de données et la gestion de projets innovants.",
     email: "farouklaouedj.pro@gmail.com",
     cvUrl: "source/CV LAOUEDJ Farouk Alternant.pdf",
   },
 
-about: {
+  about: {
     subtitle: "Un peu de contexte, ma manière de travailler, et ce que je recherche.",
     paragraphs: [
-      "Profil hybride entre technique et stratégie, je conçois des solutions SI où l’**IA** et l’**automatisation** servent directement l'efficacité métier. Mon focus : **optimisation des flux**, **fiabilité des données** et **valeur produite**.",
-      "Je travaille avec une double approche : l'agilité pour piloter les projets avec rigueur, et une expertise technique pour garantir des architectures (API, Low-Code, Data) à la fois scalables et maintenables.",
-      "Je recherche aujourd'hui une alternance où je peux piloter des projets ambitieux, traduire des besoins complexes en outils concrets, et accompagner la transformation digitale d'une équipe produit.",
+      "Profil hybride entre technique et stratégie, je conçois des solutions de Système d'Information où l'Intelligence Artificielle et l'automatisation servent directement l'efficacité métier. Mon focus : gestion de projet IT, optimisation des flux, ingénierie des données et analyse de données complexes.",
+      "Je travaille avec une double approche : l'agilité pour piloter des projets avec rigueur, et une expertise technique pour garantir des architectures (API, Low-Code, Data) à la fois scalables et maintenables. Je développe également des modèles d'intelligence artificielle.",
+      "Je recherche aujourd'hui une alternance où je peux piloter des projets IT ambitieux, traduire des besoins complexes en outils concrets, et accompagner la transformation digitale d'une équipe produit.",
     ],
   },
 
-skills: [
-    "Gestion de Projet SI (Agile/Scrum)",
-    "IA Générative & LLM (Prompt Engineering)",
+  skills: [
+    "Gestion de Projet IT (Agile/Scrum)",
+    "Intelligence Artificielle & IA Générative (Prompt Engineering)",
+    "Analyse de Données & Data",
     "Automatisation (Power Automate / n8n)",
     "Business Intelligence (Power BI)",
-    "Analyse de données (SQL)",
+    "SQL & Ingénierie des Données",
     "Développement Full Stack (React / Node.js)",
     "Architecture API & Flux EDI",
+    "Système d'Information & Gouvernance Cloud",
     "Spécifications Fonctionnelles & Recette",
-    "Gouvernance Cloud (AWS / GCP)",
     "UI/UX & Accessibilité Numérique",
   ],
 
