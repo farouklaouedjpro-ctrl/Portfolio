@@ -62,19 +62,21 @@ window.PORTFOLIO_DATA = {
       status: "En cours",
       description:
         "Je pilote le développement d'un média multi-plateforme (Instagram, TikTok) dédié à la veille technologique, où je transforme une stratégie de curation de données en un écosystème digital cohérent, de l'automatisation des flux à la conception de la future plateforme web.",
-      stack: ["UI / UX", "API", "IA"],
+      stack: ["UI / UX", "API", "IA", "Figma"],
       links: [
         { label: "Instagram", href: "https://www.instagram.com/actu_tech_fr/" },
         { label: "TikTok", href: "https://www.tiktok.com/@actu_tech_fr" },
       ],
     },
     {
-      title: "StockBoard",
+      title: "Agents IA",
       status: "En cours",
       description:
-        "Dashboard boursier qui affiche les données envoyées depuis Power Automate dans mes tables Supabase.",
-      stack: ["IA", "API", "Perf"],
-      links: [{ label: "StockBoard", href: "https://github.com/ton-profil/projet-a" },],
+        "J'ai conçu plusieurs agents d'IA qui m'accompagnent au quotidien dans la réalisation de mes projets.",
+      stack: ["Python", "LangChain", "Groq"],
+      links: [
+        { label: "GitHub", href: "https://github.com/farouklaouedj/Agents-IA/tree/main/Agent%20SEO" },
+      ],
     },
   ],
 
