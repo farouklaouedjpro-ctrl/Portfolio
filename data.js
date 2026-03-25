@@ -69,14 +69,12 @@ window.PORTFOLIO_DATA = {
       ],
     },
     {
-      title: "Agents IA",
+      title: "Projets Power BI",
       status: "En cours",
       description:
-        "J'ai conçu plusieurs agents d'IA qui m'accompagnent au quotidien dans la réalisation de mes projets.",
-      stack: ["Python", "LangChain", "Groq"],
-      links: [
-        { label: "GitHub", href: "https://github.com/farouklaouedj/Agents-IA/tree/main/Agent%20SEO" },
-      ],
+        "Expert en Data Visualisation sous Power BI, j'accompagne les entreprises dans la transformation de leurs données complexes en tableaux de bord interactifs et décisionnels, facilitant ainsi le pilotage de la performance et la réactivité opérationnelle.",
+      stack: ["Power BI", "Data", "Visualisation"],
+      links: [],
     },
   ],
 
