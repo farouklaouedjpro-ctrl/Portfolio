@@ -74,7 +74,9 @@ window.PORTFOLIO_DATA = {
       description:
         "Expert en Data Visualisation sous Power BI, j'accompagne les entreprises dans la transformation de leurs données complexes en tableaux de bord interactifs et décisionnels, facilitant ainsi le pilotage de la performance et la réactivité opérationnelle.",
       stack: ["Power BI", "Data", "Visualisation"],
-      links: [],
+      links: [
+        { label: "Rapport Otis", href: "source/PowerBI Otis/compte_rendu_powerbi_otis.pdf" },
+      ],
     },
   ],
 
