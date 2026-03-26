@@ -295,7 +295,7 @@
       var img = document.createElement("img");
       img.className = "certification-image";
       img.src = cert.image || "";
-      img.alt = cert.title || "Certification";
+      img.alt = cert.title + " - " + cert.issuer + " - Farouk Laouedj";
       img.loading = "lazy";
 
       var header = document.createElement("div");
