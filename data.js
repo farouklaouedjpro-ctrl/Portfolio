@@ -76,6 +76,7 @@ window.PORTFOLIO_DATA = {
       stack: ["Power BI", "Data", "Visualisation"],
       links: [
         { label: "Rapport Otis", href: "source/PowerBI Otis/compte_rendu_powerbi_otis.pdf" },
+        { label: "Analyse Stratégique", href: "source/Projet Power BI Analyse commercial/rapport_analyse_strategique.pdf" },
       ],
     },
   ],
