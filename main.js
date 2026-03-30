@@ -25,8 +25,13 @@ function render(data) {
   document.title = `${basics.name} — Portfolio`;
 
   // Name animation
-  $('heroNameContainer').innerHTML = basics.name.split(' ')
-    .map((part, i) => `<span class="line"><span class="line-inner" style="--delay:${1.5 + i * 0.15}s">${esc(part)}</span></span>`).join('');
+  const nameParts = basics.name.split(' ');
+  $('heroNameContainer').innerHTML = nameParts
+    .map((part, i) => {
+      const isLast = i === nameParts.length - 1;
+      const lineClass = isLast ? 'line line-stroke' : 'line';
+      return `<span class="${lineClass}"><span class="line-inner" style="--delay:${1.5 + i * 0.15}s">${esc(part)}</span></span>`;
+    }).join('');
 
   // Email links
   ['ctaEmail', 'heroContactBtn', 'contactEmailBtn'].forEach(id => {
