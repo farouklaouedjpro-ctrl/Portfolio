@@ -5,7 +5,7 @@
 // 1. UTILS
 const $ = document.getElementById.bind(document);
 const html = str => document.createRange().createContextualFragment(str);
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 // 2. RENDER (ONE FUNCTION - generates ALL HTML from data.json)
 function render(data) {
@@ -97,7 +97,7 @@ function render(data) {
 function initAnimations() {
   // Reveals
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }});
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
   }, { rootMargin: '0px 0px -8%', threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
@@ -115,8 +115,13 @@ function initAnimations() {
     requestAnimationFrame(tick);
   }
   tick();
-  document.querySelectorAll('a, button, .project-item').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('is-hover'));
+  document.querySelectorAll('a, button, .project-item, .certification-item').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+      cursor.classList.add('is-hover');
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+      el.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+    });
     el.addEventListener('mouseleave', () => cursor.classList.remove('is-hover'));
   });
 
@@ -124,7 +129,7 @@ function initAnimations() {
   document.querySelectorAll('[data-magnetic]').forEach(el => {
     el.addEventListener('mousemove', e => {
       const r = el.getBoundingClientRect();
-      el.style.transform = `translate(${(e.clientX - r.left - r.width/2) * 0.18}px, ${(e.clientY - r.top - r.height/2) * 0.18}px)`;
+      el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.18}px, ${(e.clientY - r.top - r.height / 2) * 0.18}px)`;
     });
     el.addEventListener('mouseleave', () => el.style.transform = '');
   });
@@ -150,7 +155,7 @@ function initAnimations() {
 (async () => {
   const data = await fetch('/data.json').then(r => r.json());
   render(data);
-  
+
   document.body.style.overflow = 'hidden';
 
   const dismissLoader = () => {

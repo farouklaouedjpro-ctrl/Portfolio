@@ -1,12 +1,12 @@
 /* =========================================
    1. Typographie (Font Override)
 ========================================= */
-body, 
-p, 
-.hero-lead, 
-.about-text, 
-.project-desc, 
-.certification-desc, 
+body,
+p,
+.hero-lead,
+.about-text,
+.project-desc,
+.certification-desc,
 .contact-lead,
 .marquee-item,
 .btn span,
@@ -15,11 +15,14 @@ p,
 }
 
 /* On garde Syne pour les titres et texte très fort */
-h1, h2, h3, h4, 
-.hero-name, 
-.hero-kicker, 
-.section-title, 
-.project-title, 
+h1,
+h2,
+h3,
+h4,
+.hero-name,
+.hero-kicker,
+.section-title,
+.project-title,
 .certification-title,
 .contact-title {
   font-family: 'Syne', sans-serif !important;
@@ -57,10 +60,10 @@ h1, h2, h3, h4,
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 24px;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
-              background 0.4s ease, 
-              box-shadow 0.4s ease, 
-              border-color 0.4s ease !important;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease !important;
 }
 
 .project-item:hover {
@@ -89,10 +92,11 @@ h1, h2, h3, h4,
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 20px;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
-              background 0.4s ease, 
-              box-shadow 0.4s ease !important;
-  cursor: pointer; /* Indique la cliquabilité */
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background 0.4s ease,
+    box-shadow 0.4s ease !important;
+  cursor: pointer;
+  /* Indique la cliquabilité */
 }
 
 .certification-item:hover {
@@ -108,7 +112,8 @@ h1, h2, h3, h4,
 }
 
 .certification-item:hover .certification-image {
-  transform: scale(1.03); /* Léger zoom au survol */
+  transform: scale(1.03);
+  /* Léger zoom au survol */
 }
 
 /* About Card - Apply glassmorphism */
@@ -141,18 +146,59 @@ h1, h2, h3, h4,
   animation-play-state: paused !important;
 }
 
-/* Curseur : Grossissement sur les liens */
+/* Curseur : Disparition progressive sur les liens */
+.cursor, .cursor-dot {
+  transition: opacity 0.3s ease, transform 0.3s ease !important;
+}
+
 .cursor.is-hover {
-  transform: translate(-50%, -50%) scale(1.5) !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  backdrop-filter: invert(20%) !important;
+  opacity: 0 !important;
+  transform: translate(-50%, -50%) scale(0) !important;
+}
+
+/* Le point aussi doit disparaitre */
+.cursor.is-hover + .cursor-dot {
+  opacity: 0 !important;
+}
+
+/* On prépare les éléments pour l'onde interne */
+.btn, .project-item, .certification-item, .nav a {
+  position: relative;
+  overflow: hidden !important; /* L'animation ne doit pas dépasser */
+}
+
+/* Assure que le contenu reste au-dessus de l'onde */
+.btn > *, .project-item > *, .certification-item > *, .nav a > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* L'onde de remplissage (Vitesse très lente : 2s) */
+.btn::before, .project-item::before, .certification-item::before, .nav a::before {
+  content: '';
+  position: absolute;
+  top: var(--mouse-y, 50%);
+  left: var(--mouse-x, 50%);
+  width: 350%; /* Large pour couvrir tout le bouton peu importe le point d'entrée */
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  /* Animation très lente (2s) pour un effet majestueux */
+  transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.btn:hover::before, .project-item:hover::before, .certification-item:hover::before, .nav a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* Boutons hover states premium */
 .btn-primary {
   transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
   box-shadow: 0 0 20px rgba(0, 240, 255, 0.4) !important;
 }
