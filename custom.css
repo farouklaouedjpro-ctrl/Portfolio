@@ -1,0 +1,171 @@
+/* =========================================
+   1. Typographie (Font Override)
+========================================= */
+body, 
+p, 
+.hero-lead, 
+.about-text, 
+.project-desc, 
+.certification-desc, 
+.contact-lead,
+.marquee-item,
+.btn span,
+.nav a {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* On garde Syne pour les titres et texte très fort */
+h1, h2, h3, h4, 
+.hero-name, 
+.hero-kicker, 
+.section-title, 
+.project-title, 
+.certification-title,
+.contact-title {
+  font-family: 'Syne', sans-serif !important;
+}
+
+/* =========================================
+   2. Design Premium & Tech (Couleurs & Gradients)
+========================================= */
+:root {
+  --neon-blue: #00f0ff;
+  --neon-purple: #8a2be2;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-hover-bg: rgba(255, 255, 255, 0.07);
+}
+
+/* Gradient sur le "Kicker" pour le rendre plus Tech */
+.hero-kicker {
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   3. Glassmorphism & Hover States 
+========================================= */
+
+/* Projets */
+.project-item {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              background 0.4s ease, 
+              box-shadow 0.4s ease, 
+              border-color 0.4s ease !important;
+}
+
+.project-item:hover {
+  transform: translateY(-8px) !important;
+  background: var(--glass-hover-bg) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+.project-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-item:hover .project-tag {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Certifications */
+.certification-item {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              background 0.4s ease, 
+              box-shadow 0.4s ease !important;
+  cursor: pointer; /* Indique la cliquabilité */
+}
+
+.certification-item:hover {
+  transform: translateY(-8px) !important;
+  background: var(--glass-hover-bg) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+.certification-image {
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+.certification-item:hover .certification-image {
+  transform: scale(1.03); /* Léger zoom au survol */
+}
+
+/* About Card - Apply glassmorphism */
+.about-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  background: var(--glass-hover-bg);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================================
+   4. Micro-interactions
+========================================= */
+
+/* Marquee Pause on Hover */
+.marquee-track {
+  display: flex !important;
+  white-space: nowrap !important;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused !important;
+}
+
+/* Curseur : Grossissement sur les liens */
+.cursor.is-hover {
+  transform: translate(-50%, -50%) scale(1.5) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: invert(20%) !important;
+}
+
+/* Boutons hover states premium */
+.btn-primary {
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4) !important;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Footer Links */
+.footer-top:hover svg {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
