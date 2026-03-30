@@ -5,7 +5,7 @@ window.PORTFOLIO_DATA = {
   basics: {
     name: "Farouk LAOUEDJ",
     kicker: "Chef de projet IT, Intelligence Artificielle et Système d'information",
-    role: "Chef de projet IT & Data",
+    role: "Chef de projet IT / Data / IA",
     lead:
       "Expert en devenir des SI, je bâtis des solutions numériques où l'IA et l'automatisation rencontrent la stratégie métier. J'aime gérer des projets IT complexes, analyser des données et développer des modèles d'intelligence artificielle pour transformer vos processus.",
     location: "Île-de-France, FR",
