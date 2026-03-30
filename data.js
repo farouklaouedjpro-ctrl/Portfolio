@@ -1,5 +1,6 @@
 // Modifie uniquement ce fichier pour personnaliser ton portfolio.
-// Ensuite ouvre `index.html` ou lance un serveur local (voir README).
+// Dernière modification: 30 Mars 2026
+// farouklaouedj.fr
 
 window.PORTFOLIO_DATA = {
   basics: {
