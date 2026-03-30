@@ -36,11 +36,9 @@ h1, h2, h3, h4,
   --glass-hover-bg: rgba(255, 255, 255, 0.07);
 }
 
-/* Gradient sur le "Kicker" pour le rendre plus Tech */
+/* Style simple sur le "Kicker" */
 .hero-kicker {
-  background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000;
   display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
