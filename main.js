@@ -98,8 +98,9 @@ function initAnimations() {
 
   // Cursor
   if (window.matchMedia('(pointer: coarse)').matches) return;
-  document.body.classList.add('cursor-ready');
   const cursor = document.querySelector('.cursor'), dot = document.querySelector('.cursor-dot');
+  if (!cursor || !dot) return;
+  document.body.classList.add('cursor-ready');
   let mx = -100, my = -100, cx = -100, cy = -100, dx = -100, dy = -100;
   document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
   function tick() {
