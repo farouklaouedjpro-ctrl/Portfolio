@@ -64,6 +64,15 @@
         { "label": "Rapport Otis", "href": "source/PowerBI Otis/compte_rendu_powerbi_otis.pdf" },
         { "label": "Analyse Stratégique", "href": "source/Projet Power BI Analyse commercial/rapport_analyse_strategique.pdf" }
       ]
+    },
+    {
+      "title": "Contentful",
+      "status": "Terminé",
+      "description": "Grâce à l'intégration de Contentful, j'ai séparé la gestion des textes du design du site. Résultat : on peut piloter tout le contenu du blog comme sur un traitement de texte, tout en profitant d'une technologie qui garantit un affichage instantané des pages pour les lecteurs.",
+      "stack": ["Contentful", "CMS", "Blog"],
+      "links": [
+        { "label": "Blog", "href": "https://blog.farouklaouedj.fr" }
+      ]
     }
   ],
   "certifications": [
