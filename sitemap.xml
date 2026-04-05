@@ -3,6 +3,19 @@
   <url>
     <loc>https://farouklaouedj.fr/</loc>
     <lastmod>2026-04-05</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://farouklaouedj.fr/source/CV%20Portfolio%20Laouedj%20Farouk.pdf</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://farouklaouedj.fr/source/CV%20LAOUEDJ%20Farouk%20Alternant.pdf</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
