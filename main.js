@@ -22,7 +22,7 @@ function render(data) {
   $('metaAvailability').textContent = basics.availability;
   $('footerName').textContent = basics.name;
   $('footerYear').textContent = new Date().getFullYear();
-  document.title = `${basics.name} — Portfolio`;
+  document.title = basics.siteTitle;
 
   // Name animation
   const nameParts = basics.name.split(' ');
